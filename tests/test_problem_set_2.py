@@ -32,10 +32,10 @@ class Tests:
         cases = [
           { "inputs": ["-71"], "expected": "Invalid temperature!" },
           { "inputs": ["135"], "expected": "Invalid temperature!" },
-          { "inputs": [random.randint(135, 400)], "expected": "Invalid temperature!" },
-          { "inputs": [random.randint(135, 400)], "expected": "Invalid temperature!" },
-          { "inputs": [random.randint(-400, -69)], "expected": "Invalid temperature!" },
-          { "inputs": [random.randint(-400, -69)], "expected": "Invalid temperature!" },
+          { "inputs": [str(random.randint(135, 400))], "expected": "Invalid temperature!" },
+          { "inputs": [str(random.randint(135, 400))], "expected": "Invalid temperature!" },
+          { "inputs": [str(random.randint(-400, -69))], "expected": "Invalid temperature!" },
+          { "inputs": [str(random.randint(-400, -69))], "expected": "Invalid temperature!" },
         ]
         self.run_tests(weather_helper, cases, capsys, monkeypatch, count_inputs=True)
 
